@@ -2,7 +2,6 @@ from django.contrib.auth.models import User
 from rest_framework import serializers
 from user_auth.models import UserProfile
 
-
 class RegistrationSerializer(serializers.Serializer):
     fullname = serializers.CharField(max_length=255)
     email = serializers.EmailField()
@@ -36,7 +35,6 @@ class RegistrationSerializer(serializers.Serializer):
         )
         
         return drf_user
-
 
 class LoginSerializer(serializers.Serializer):
     email = serializers.EmailField()

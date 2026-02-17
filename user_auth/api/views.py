@@ -33,7 +33,6 @@ class RegistrationView(APIView):
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
-
 class LoginView(APIView):
     permission_classes = [AllowAny]
 
@@ -57,7 +56,6 @@ class LoginView(APIView):
                 return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 class LoginGuestView(APIView):
     permission_classes = [AllowAny]
